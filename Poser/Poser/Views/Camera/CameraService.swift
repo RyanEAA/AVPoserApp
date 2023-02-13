@@ -23,6 +23,7 @@ class CameraService {
         checkPermissions(completion: completion)
     }
     
+    //checks permissions
     private func checkPermissions(completion: @escaping
                                   (Error?) -> ()){
         switch AVCaptureDevice.authorizationStatus(for: .video){
@@ -44,6 +45,8 @@ class CameraService {
             break
         }
     }
+    
+    
     
     private func setupCamera(completion: @escaping (Error?) -> ()){
         let session = AVCaptureSession()
@@ -70,8 +73,13 @@ class CameraService {
         }
     }
     
+    // what happens after photo has been taken
     func capturePhoto(with settings: AVCapturePhotoSettings = AVCapturePhotoSettings()){
-        output.capturePhoto(with: settings, delegate: delegate!)
+        if let delegate = delegate {
+            output.capturePhoto(with: settings, delegate: delegate)
+        } else {
+            // handle the case where delegate is nil
+        }
     }
     
 }

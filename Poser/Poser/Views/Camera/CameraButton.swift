@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CameraButton: View {
-
+    @Binding var generatedImage: UIImage?
+    
     @State private var capturedImage: UIImage? = nil
     @State private var isCustomCameraViewPresented = false
     
@@ -24,8 +25,8 @@ struct CameraButton: View {
             }
             VStack{
                 Spacer()
-                Button(action: { isCustomCameraViewPresented.toggle()
-                    
+                Button(action: {
+                    isCustomCameraViewPresented.toggle()
                 }, label: {
                     Image(systemName: "camera.fill")
                         .font(.largeTitle)
@@ -33,19 +34,21 @@ struct CameraButton: View {
                         .background(Color.black)
                         .foregroundColor(.white)
                         .clipShape(Circle())
-                    
                 })
                 .padding(.bottom)
                 .sheet(isPresented: $isCustomCameraViewPresented, content: {
-                    CustomCameraView(capturedImage: $capturedImage)
+                    CustomCameraView(capturedImage: $capturedImage, generatedImage: $generatedImage)
                 })
             }
+        }
+        .onAppear {
+            capturedImage = generatedImage
         }
     }
 }
 
 struct CameraButton_Previews: PreviewProvider {
     static var previews: some View {
-        CameraButton()
+        CameraButton(generatedImage: .constant(nil))
     }
 }

@@ -1,13 +1,15 @@
 //
-//  ContentView.swift
+//  HomeMenuView.swift
 //  Poser
 //
-//  Created by Ryan Aparicio on 1/23/23.
+//  Created by Ryan Aparicio on 1/31/23.
 //
 
 import SwiftUI
+import Kingfisher
 
-struct ContentView: View {
+struct HomeMenuView: View {
+    
     @State private var generatedImage: UIImage? = nil
     
     var body: some View {
@@ -20,13 +22,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeMenuView()
     }
 }
-
-
-
-
-
