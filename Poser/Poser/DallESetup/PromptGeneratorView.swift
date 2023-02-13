@@ -34,7 +34,7 @@ struct PromptGeneratorView: View {
                 Task {
                     do {
                         // Call the generateImage function from the DallEImageGenerator class
-                        let response = try await DallEImageGenerator.shared.generateImage(withPrompt: prompt, apiKey: "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")
+                        let response = try await DallEImageGenerator.shared.generateImage(withPrompt: prompt, apiKey: "INSERT_DALLEAPI_KEY")
                         
                         // Extract the first URL from the response
                         if let url = response.data.map(\.url).first {
