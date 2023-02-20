@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var photoTaken = false // add new variable
+
     @State private var generatedImage: UIImage? = nil
     
+    @State private var prompt: String = ""
+    
     var body: some View {
-        VStack {
-            Spacer()
-            PromptGeneratorView(generatedImage: $generatedImage)
-            CameraButton(generatedImage: $generatedImage)
-        }
-        .padding()
+        HomeMenuView()
+//        VStack {
+//            Spacer()
+//            PromptGeneratorView(generatedImage: $generatedImage)
+//            CameraButton(generatedImage: $generatedImage)
+//
+//        }
+//        .padding()
     }
 }
 

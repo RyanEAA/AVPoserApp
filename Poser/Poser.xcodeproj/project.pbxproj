@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		94090E8B299567B300B33DFC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 94090E8A299567B300B33DFC /* Kingfisher */; };
+		94090E8D29A036FA00B33DFC /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 94090E8C29A036FA00B33DFC /* avatar.jpeg */; };
+		94090E8F29A0401E00B33DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94090E8E29A0401E00B33DFC /* Assets.xcassets */; };
+		94090EE029A4168200B33DFC /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94090EDF29A4168200B33DFC /* ItemView.swift */; };
+		94090EE229A416DB00B33DFC /* ItemButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94090EE129A416DB00B33DFC /* ItemButtonStyle.swift */; };
 		94B1CC97297F7348004ED723 /* PoserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B1CC96297F7348004ED723 /* PoserApp.swift */; };
 		94B1CC99297F7348004ED723 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B1CC98297F7348004ED723 /* ContentView.swift */; };
 		94B1CC9B297F734A004ED723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B1CC9A297F734A004ED723 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		94090DFD298CBA5300B33DFC /* peoplePosing.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = peoplePosing.webp; sourceTree = "<group>"; };
+		94090E8C29A036FA00B33DFC /* avatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpeg; sourceTree = "<group>"; };
+		94090E8E29A0401E00B33DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94090EDF29A4168200B33DFC /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		94090EE129A416DB00B33DFC /* ItemButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemButtonStyle.swift; sourceTree = "<group>"; };
 		94B1CC93297F7348004ED723 /* Poser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B1CC96297F7348004ED723 /* PoserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoserApp.swift; sourceTree = "<group>"; };
 		94B1CC98297F7348004ED723 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 		94B1CC8A297F7348004ED723 = {
 			isa = PBXGroup;
 			children = (
+				94090E8E29A0401E00B33DFC /* Assets.xcassets */,
 				94B1CC95297F7348004ED723 /* Poser */,
 				94B1CCA6297F734A004ED723 /* PoserTests */,
 				94B1CCB0297F734A004ED723 /* PoserUITests */,
@@ -117,6 +126,7 @@
 		94B1CC95297F7348004ED723 /* Poser */ = {
 			isa = PBXGroup;
 			children = (
+				94090E8C29A036FA00B33DFC /* avatar.jpeg */,
 				94B1CD212988B358004ED723 /* DallESetup */,
 				94B1CCC2297F78FF004ED723 /* Views */,
 				94B1CC96297F7348004ED723 /* PoserApp.swift */,
@@ -177,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				94B1CD8C2989BC87004ED723 /* HomeMenuView.swift */,
+				94090EDF29A4168200B33DFC /* ItemView.swift */,
+				94090EE129A416DB00B33DFC /* ItemButtonStyle.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -313,6 +325,8 @@
 			files = (
 				94B1CC9E297F734A004ED723 /* Preview Assets.xcassets in Resources */,
 				94B1CC9B297F734A004ED723 /* Assets.xcassets in Resources */,
+				94090E8F29A0401E00B33DFC /* Assets.xcassets in Resources */,
+				94090E8D29A036FA00B33DFC /* avatar.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94090EE229A416DB00B33DFC /* ItemButtonStyle.swift in Sources */,
+				94090EE029A4168200B33DFC /* ItemView.swift in Sources */,
 				94B1CD1629888AA7004ED723 /* DallEImageGenerator.swift in Sources */,
 				94B1CD8D2989BC88004ED723 /* HomeMenuView.swift in Sources */,
 				94B1CCCC298057AE004ED723 /* CameraService.swift in Sources */,

@@ -7,12 +7,16 @@
 import SwiftUI
 
 struct PromptGeneratorView: View {
-    // State property for storing the user entered prompt
-    @State private var prompt: String = ""
     
     // Binding to the generated image
     @Binding var generatedImage: UIImage?
     
+    // State property for storing the user entered prompt
+    @State private var prompt: String = ""
+    
+    //selected style from homemenuview
+    @State private var userChosenPrompt: String = ""
+
     // State property for tracking the loading state
     @State private var isLoading: Bool = false
     
@@ -34,7 +38,7 @@ struct PromptGeneratorView: View {
                 Task {
                     do {
                         // Call the generateImage function from the DallEImageGenerator class
-                        let response = try await DallEImageGenerator.shared.generateImage(withPrompt: prompt, apiKey: "INSERT_DALLEAPI_KEY")
+                        let response = try await DallEImageGenerator.shared.generateImage(withPrompt: (userChosenPrompt + prompt), apiKey: "DALL_E_API_KEY")
                         
                         // Extract the first URL from the response
                         if let url = response.data.map(\.url).first {
@@ -80,7 +84,6 @@ struct PromptGeneratorView: View {
                 }
             }
             
-            // Button to open the camera view with the generated image
         }
         .padding()
     }
